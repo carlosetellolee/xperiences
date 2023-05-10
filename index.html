@@ -6,12 +6,16 @@
 -->
 <html>
 	<head>
-		<title>🚀 Experiencias</title>
+		<title>OpenScience Xp</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/icono.ico">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="assets/js/script.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+      	<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -25,7 +29,7 @@
 							<section class="panel banner right" id="home">
 								<div class="content color0 span-3-75">
 									<h1 class="major">Experiencias iberoamericanas en la gestión de la información científica</h1>
-									<p>Un portafolio realizado por Carlos Eduardo Tello Lee para la asignatura <i>Fundamentos de la información científica</i>, dirigida por el Prof. Johann Pirela Morillo, de la <strong><a href="https://www.lasalle.edu.co/pregrado/bibliotecologia-y-estudios-de-la-informacion">Carrera de Bibliotecología y Estudios de la Información</a></strong> de la <strong><a href="https://www.lasalle.edu.co/inicio/">Universidad de La Salle</a></strong>.</p>
+									<p>Un portafolio realizado por Carlos Eduardo Tello Lee para la asignatura <i>Fundamentos de la información científica</i>, dirigida por el Prof. Johann Pirela Morillo, de la <strong><a href="https://www.lasalle.edu.co/pregrado/bibliotecologia-y-estudios-de-la-informacion" target="_blank">Carrera de Bibliotecología y Estudios de la Información</a></strong> de la <strong><a href="https://www.lasalle.edu.co/inicio/" target="_blank">Universidad de La Salle</a></strong>.</p>
 								</div>
 								<div class="image filtered span-1-75" data-position="25% 25%">
 									<img src="images/pic01.jpg" title="Santa Catalina de Alejandría sostiene un libro fajado" alt="Santa Catalina de Alejandría sostiene un libro fajado" />
@@ -35,11 +39,11 @@
 							<section class="panel color4-alt">
 								<div class="intro color4">
 									<h2 class="major">¿Cómo te llamas?</h2>
-									<p>Antes de empezar el viaje por esta selección de experiencias de <strong><a href="https://github.com/Open-Science-Training-Handbook/Open-Science-Training-Handbook_EN/blob/master/02OpenScienceBasics/01OpenConceptsAndPrinciples.md">Open Science</a></strong> en Iberoamérica, me gustaría saber tu nombre...</p>
+									<p>Antes de empezar el viaje por esta selección de experiencias de <strong><a href="https://github.com/Open-Science-Training-Handbook/Open-Science-Training-Handbook_EN/blob/master/02OpenScienceBasics/01OpenConceptsAndPrinciples.md" target="_blank">Open Science</a></strong> en Iberoamérica, me gustaría saber tu nombre...</p>
 										<div class="field">
-											<input type="text" name="name" id="name" placeholder="Escríbelo aquí, por favor..." onkeyup="say_hello()" autofocus>
+											<input type="text" name="name" id="name" placeholder="Escríbelo aquí, por favor..." onkeyup="say_hello()" autofocus maxlength="24">
 										</div>
-									<br>
+									<p></p>
 									<ul class="actions">
 										<li></li>
 										<li></li>
@@ -83,30 +87,55 @@
 										</div>
 									</h2>
 									<p>
-										Si quieres hacer un recorrido lineal, avanza hacia la derecha. Si quieres entrar a una experiencia en particular, usa la tabla de <strong><a href="#saludo">Contenido</a></strong> para navegar. 
+										¡Te doy la bienvenida! Si quieres hacer un recorrido lineal, avanza hacia la derecha. Si quieres entrar a una experiencia en particular, usa la tabla de <strong><a href="#saludo">Contenido</a></strong> para navegar y los botones para ir y volver. Puedes revisar todos los recursos complementarios, visitar las páginas enlazadas y responder las preguntas que he preparado para tu visita.
 									</p>
-									<br>
 									<ul class="actions">
 										<li></li>
 										<li></li>
 										<li></li>
 										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
 										<li><a href="#home" class="button primary color1 circle icon solid fa-home" title="Ir a Presentación"></a></li>
+										<li></li>
+										<li><a href="#os" class="button primary color1 circle icon solid fa-angle-right" title="¡Avanzar!"></a></li>
 									</ul>
+								</div>
+							</section>
+
+							<section class="panel color4-alt">
+								<div class="inner columns divided">
+									<div class="span-3-25">
+										<h2 class="major" id="os">¿Qué es Ciencia Abierta?</h2>
+										<p>
+											Según la <strong><a href="https://es.unesco.org/fieldoffice/montevideo/DerechoALaCiencia/CienciaAbierta" target="_blank">UNESCO</a></strong>, es un constructo inclusivo que combina diversos movimientos y prácticas con el fin de que los conocimientos científicos multilingües:
+										</p>
+										<ol>
+											<li>Estén abiertamente disponibles y sean accesibles para todos, así como reutilizables por todos.</li>
+											<li>Se incrementen las colaboraciones científicas y el intercambio de información en beneficio de la ciencia y la sociedad.</li>
+											<li>Y se abran los procesos de creación, evaluación y comunicación de los conocimientos científicos a los agentes sociales más allá de la comunidad científica tradicional. (2022, 45)</li>
+										</ol>
+										<p></p>
+										<ul class="actions">
+											<li><a href="#saludo" class="button primary color1 circle icon solid fa-list-ol" title="Ir a Contenido">Home</a></li>
+											<li></li>
+											<li><a href="#preg1" class="button primary color1 circle icon solid fa-angle-right" title="¡Avanzar!"></a></li>
+										</ul>
+									</div>
+								</div>
+							</section>
+<!-- GIF ACCESO ABIERTO -->
+							<section class="panel">
+								<div class="gallery">
+									<a href="images/gif/AccesoAbierto.gif" class="image filtered span-2-5" data-position="top" title="gif divulgativo de Acceso Abierto de SiB Colombia" alt="gif divulgativo de Acceso Abierto de SiB Colombia"><img src="images/gif/AccesoAbierto.gif" title="gif divulgativo de Acceso Abierto de SiB Colombia" alt="gif divulgativo de Acceso Abierto de SiB Colombia"></a>
 								</div>
 							</section>
 
 							<section class="panel color4-alt">
 								<div class="intro color4">
 									<ul class="actions">
-										<li class="button primary color1 circle icon solid fa-question" style="cursor:help"></li>
+										<li class="button primary color1 circle icon solid fa-question" style="cursor:help" id="preg1"></li>
 									</ul>
 									<p>
-										¿Una experiencia portuguesa en Open Science (OS) como el <strong><a href="https://dados.rcaap.pt/?locale=pt_PT">Repositório de Dados Científicos</a></strong> podría incluirse en este portafolio? 
+										¿Una experiencia portuguesa en Open Science (OS) como el <strong><a href="https://dados.rcaap.pt/?locale=pt_PT" target="_blank">Repositório de Dados Científicos</a></strong> podría incluirse en este portafolio? 
 									</p>
 									<div class="field quarter">
 										<input type="radio" id="q1_ans1" name="¡Muy bien! Portugal es uno de los 23 países que, según la RAE, integran Iberoamérica." class="color2" onclick="correcta()" />
@@ -137,8 +166,8 @@
 					<!-- Panel MÉX 1 -->
 						<section class="panel color1" id="xuno">
 							<div class="intro joined">
-								<h2 class="major"><a href="https://mediateca.inah.gob.mx/repositorio/">1. Mediateca INAH</a></h2>
-								<p>La <strong><a href="https://mediateca.inah.gob.mx/repositorio/">Mediateca</a></strong> del <strong><a href="https://www.inah.gob.mx/">Instituto Nacional de Antropología e Historia</a></strong> es una plataforma web de repositorio abierto para "presentar y hacer accesible la representación digital del patrimonio histórico y cultural" de México.</p>
+								<h2 class="major"><a href="https://mediateca.inah.gob.mx/repositorio/" target="_blank">1. Mediateca INAH</a></h2>
+								<p>La <strong><a href="https://mediateca.inah.gob.mx/repositorio/" target="_blank">Mediateca</a></strong> del <strong><a href="https://www.inah.gob.mx/" target="_blank">Instituto Nacional de Antropología e Historia</a></strong> es una plataforma web de repositorio abierto que «tiene como objetivo preservar y hacer accesible la representación digital del patrimonio histórico y cultural bajo su resguardo así como el conocimiento científico que genera a través de sus centros de educación e investigación.»</p>
 								<ul class="actions">
 									<li><a href="#saludo" class="button primary color1 circle icon solid fa-list-ol" title="Ir a Contenido">Home</a></li>
 								</ul>
@@ -147,33 +176,58 @@
 						<!-- Panel MÉX 1 - Menú -->
 							<div class="inner">
 								<ul class="grid-icons three connected">
-									<li><a href="#first" title="Galería"><span class="icon solid fa-camera-retro"><span class="label">Ipsum</span></span></a></li>
-									<li><a href="#first" title="Datos y contexto"><span class="icon fa-address-card"><span class="label">Lorem</span></span></a></li>
-									<li><a href="#first" title="Redes sociales y tiendas"><span class="icon solid fa-paper-plane"><span class="label">Dolor</span></span></a></li>
-									<li><a href="#first" title="¿Qué se abre?"><span class="icon solid fa-dice-one"><span class="label">Sit</span></span></a></li>
-									<li><a href="#first" title="¿Cómo se abre?"><span class="icon solid fa-dice-two"><span class="label">Amet</span></span></a></li>
-									<li><a href="#first" title="¿A quién se abre?"><span class="icon solid fa-dice-three"><span class="label">Nullam</span></span></a></li>
+									<li><a href="#mexgal" title="Galería"><span class="icon solid fa-camera-retro"><span class="label">Ipsum</span></span></a></li>
+									<li><a href="#mexdat" title="Datos y contexto"><span class="icon fa-address-card"><span class="label">Lorem</span></span></a></li>
+									<li><a href="#pdf1" title="Agenda Digital de Cultura"><span class="icon solid fa-theater-masks"><span class="label">Dolor</span></span></a></li>
+									<li><a href="#mexque" title="¿Qué se abre?"><span class="icon solid fa-dice-one"><span class="label">Sit</span></span></a></li>
+									<li><a href="#mexcom" title="¿Cómo se abre?"><span class="icon solid fa-dice-two"><span class="label">Amet</span></span></a></li>
+									<li><a href="#mexqui" title="¿A quién se abre?"><span class="icon solid fa-dice-three"><span class="label">Nullam</span></span></a></li>
 								</ul>
 							</div>
 						</section>
 		
 						<!-- Panel MÉX 2 - Galería -->
 						<section class="panel">
-							<div class="gallery">
-								<a href="images/gif/F_ANTRO.gif" class="image filtered span-2-5" data-position="right"><img src="images/gif/F_ANTRO.gif" alt="" /></a>
+							<div class="gallery" id="mexgal">
+								<a href="images/gif/F_ANTRO.gif" class="image filtered span-2-5" data-position="right"><img src="images/gif/F_ANTRO.gif" title="Antropomorfa Masculina - MID: 72_20160405-150000:11349" alt="Antropomorfa Masculina - MID: 72_20160405-150000:11349" /></a>
 								<div class="group span-3">
 
 									<iframe width="560" height="315" src="https://www.youtube.com/embed/VL5VcKMrZGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-									<a href="images/gallery/thumbs/mex2.jpg" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/mex2.jpg" alt="" /></a>
-									<a href="images/gallery/fulls/mex1.png" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/mex1.jpg" alt="" /></a>
+									<a href="images/gallery/thumbs/mex2.jpg" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/mex2.jpg" title="Códice Dresde - MID: 47_20190703-200356:1630" alt="Códice Dresde - MID: 47_20190703-200356:1630" /></a>
+									<a href="images/gallery/fulls/mex1.png" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/mex1.jpg" title="Virgen de Belén - MID: 91_20190811-114800:434" alt="Virgen de Belén - MID: 91_20190811-114800:434" /></a>
 								</div>
 								<div class="group span-3">
-									<a href="images/gallery/fulls/mex4.png" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/mex4.jpg" alt="" />
-									<a href="images/gallery/thumbs/mex3.jpg" class="image filtered span-1-5" data-position="bottom"><img src="images/gallery/thumbs/mex3.jpg" alt="" /></a>
+									<a href="images/gallery/fulls/mex4.png" class="image filtered span-1-5" data-position="center" title="Figurilla de Quetzalcóatl - MID: 20160704-170000:11231"><img src="images/gallery/thumbs/mex4.jpg" title="Figurilla de Quetzalcóatl - MID: 20160704-170000:11231" alt="Figurilla de Quetzalcóatl - MID: 20160704-170000:11231" />
+									<a href="images/gallery/thumbs/mex3.jpg" class="image filtered span-1-5" data-position="bottom"><img src="images/gallery/thumbs/mex3.jpg" title="Cráneo antropomorfo, decorado con concha, coral y turquesa - MID: 120_20190111-101032:10-543139" alt="Cráneo antropomorfo, decorado con concha, coral y turquesa - MID: 120_20190111-101032:10-543139" /></a>
 
 									<iframe width="560" height="315" src="https://www.youtube.com/embed/OxCn0tzHxN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 								</div>
-								<a href="images/gif/Cihuaoatl_0.gif" class="image filtered span-2-5" data-position="right"><img src="images/gif/Cihuaoatl_0.gif" alt="" /></a>
+								<a href="images/gif/Cihuaoatl_0.gif" class="image filtered span-2-5" data-position="right"><img src="images/gif/Cihuaoatl_0.gif" title="Escultura de Cihuateteo - MID: 82_20140130-123000:641" alt="Escultura de Cihuateteo - MID: 82_20140130-123000:641" /></a>
+							</div>
+						</section>
+
+						<section class="panel color4-alt">
+							<div class="intro color4">
+								<ul class="actions">
+									<li class="button primary color1 circle icon solid fa-question" style="cursor:help"></li>
+								</ul>
+								<p>
+									¿Un repositorio abierto es un modelo de investigación científica hecha por científicos no profesionales?
+								</p>
+								<div class="field quarter">
+									<input type="radio" id="q3_ans2" name="No, no es correcto. Así se definiría ciencia ciudadana." class="color2" onclick="incorrecta3()" />
+									<label for="q3_ans2">Sí</label>
+									<ol>
+										<ul style="color:coral" id="msg7"></ul>
+									</ol>
+								</div>
+								<div class="field quarter">
+									<input type="radio" id="q3_ans1" name="¡Bien! Ya que son catálogos que albergan literatura y recursos científicos y hacen que su contenido sea de libre acceso para todos en el mundo." class="color2" onclick="correcta2()" />
+									<label for="q3_ans1">No</label>
+									<ol>
+										<ul style="color:limegreen" id="msg6"></ul>
+									</ol>
+								</div>
 							</div>
 						</section>
 		
@@ -181,8 +235,7 @@
 						<section class="panel color4-alt">
 							<div class="inner columns divided">
 								<div class="span-3-25">
-									<h2 class="major">Datos básicos</h2>
-									<div class="table-wrapper">
+									<div class="table-wrapper" id="mexdat">
 										<table>
 											<thead>
 												<tr>
@@ -192,768 +245,872 @@
 											</thead>
 											<tbody>
 												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
+													<td><strong>Lanzamiento</strong>:</td>
+													<td>2018</td>
 												</tr>
+												<tr></tr>
 												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td><strong>Campo científico</strong>:</td>
+													<td>Ciencias Sociales Abiertas</td>
 												</tr>
+												<tr></tr>
 												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td><strong>Tipología de <dfn title="Siglas para Open Science">OS</dfn></strong>:</td>
+													<td>Repositorio institucional abierto</td>
 												</tr>
+												<tr></tr>
 												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
+													<td><strong>Área</strong>:</td>
+													<td>Patrimonio cultural</td>
+												</tr>
+												<tr></tr>
+												<tr>
+													<td><strong>Dirigido por</strong>:</td>
+													<td><a href="https://www.inah.gob.mx/" target="_blank">Instituto Nacional de Antropología e Historia</a></td>
+												</tr>
+												<tr></tr>
+												<tr>
+													<td><strong>Sector</strong>:</td>
+													<td>Público</td>
+												</tr>
+												<tr></tr>
+												<tr>
+													<td><strong>Sinergia con</strong>:</td>
+													<td><a href="https://mexicana.cultura.gob.mx/" target="_blank">MEXICANA. Repositorio del patrimonio cultural de México</a></td>
 												</tr>
 											</tbody>
 										</table>
 									</div>
 								</div>
-								<div class="span-1-5">
+								<div class="span-1-5" id="mexred">
 									<ul class="contact-icons color1">
-										<li class="icon brands fa-facebook-f"><a href="https://www.facebook.com/mediatecainah">/mediatecainah</a></li>
-										<li class="icon brands fa-instagram"><a href="https://www.instagram.com/mediateca_inah/">/mediateca_inah</a></li>
-										<li class="icon brands fa-twitter"><a href="https://twitter.com/mediateca_inah">@mediateca_inah</a></li>
-										<li class="icon brands fa-youtube"><a href="https://www.youtube.com/user/INAHTV">@INAHTV</a></li>	
-										<li class="icon brands fa-pinterest"><a href="https://play.google.com/store/apps/details?id=edu.cornell.birds.ebird&hl=es_CO&gl=US">@mediatecainah</a></li>
+										<li class="icon brands fa-facebook-f"><a href="https://www.facebook.com/mediatecainah" target="_blank">/mediatecainah</a></li>
+										<li class="icon brands fa-instagram"><a href="https://www.instagram.com/mediateca_inah/" target="_blank">/mediateca_inah</a></li>
+										<li class="icon brands fa-twitter"><a href="https://twitter.com/mediateca_inah" target="_blank">@mediateca_inah</a></li>
+										<li class="icon brands fa-youtube"><a href="https://www.youtube.com/user/INAHTV" target="_blank">@INAHTV</a></li>	
+										<li class="icon brands fa-pinterest"><a href="https://www.pinterest.es/mediatecainah/" target="_blank">@mediatecainah</a></li>
 									</ul>
 								</div>
-							</div>	
+								<div class="span-3-25">
+									<h2 class="major" id="obj">Objetivos misionales</h2>
+									<p>«A través de la <strong><a href="https://mediateca.inah.gob.mx/islandora_74/" target="_blank">Mediateca</a></strong> el <strong><a href="https://www.inah.gob.mx/" target="_blank">Instituto Nacional de Antropología e Historia</a></strong> contribuye con la <strong><a href="https://agendadigital.cultura.gob.mx/#l-sc" target="_blank">Agenda Digital de Cultura</a></strong> del <strong><a href="https://www.gob.mx/cultura" target="_blank">Gobierno Federal de México</a></strong> al:</p>
+
+									<ol>
+										<li>Crear nuevas formas de acercamiento al patrimonio cultural e histórico del país.</li>
+										<li>Fomentar la transferencia de conocimiento mediante herramientas innovadoras que estimulan la colaboración entre profesionales y entre la sociedad en general.</li>
+										<li>Resguardar el patrimonio digital de la institución de manera estandarizada para su preservación, distribución y reutilización.</li>
+										<li>Sumarse a las iniciativas internacionales de acceso abierto a la información <dfn title="Siglas para Open Archives Initiative">OAI</dfn> y de preservación del patrimonio digital mundial.»</li> 
+									</ol>
+								</div>
+								<div class="span-3-50" id="pdf1">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/FULWmp5vm18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									<p></p>
+									<ul class="actions">
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li><a href="#obj" class="button primary color1 circle icon solid fa-angle-left" title="Ir a Presentación"></a></li>
+										<li></li>
+										<li><a href="#adc" class="button primary color1 circle icon solid fa-angle-right" title="¡Avanzar!"></a></li>
+									</ul>
+								</div>
+								<div class="inner columns divided">
+									<div class="span-8-25" id="adc">
+										<div>
+											<embed src="images/ADC_Mexico.pdf" type="application/pdf" style="width:100%;height:100%; min-height: 400px;">
+										</div>
+									</div>
+								</div>	
+							</div>
 						</section>
 		
 								<section class="panel">
 									<div class="intro color2">
 										<h2 class="major">¿Qué se abre?</h2>
+											<strong><p>
+												1.1. Fuentes patrimoniales digitales<br>
+												1.2. Distribución por formatos<br>
+												1.3. Infraestructura
+											</p></strong>
 									</div>
 								</section>
 		
 								<section class="panel color4-alt">
 									<div class="inner columns divided">
 										<div class="span-3-25">
-											<h2 class="major">Datos</h2>
-											<ul>
-												<li>Liberación de los datos para la reutilización en redes científicas y por ciudadanos.</li>
-												<li>Los productores de datos no son científicos sino ciudadanos.</li>
-												<li>Compartir datos en una comunidad de aficionados a las aves, por más que luego esos datos también sean utilizados por científicos en diversas disciplinas.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
-											</ul>
+											<h2 class="major" id="mexque">531.005 Fuentes patrimoniales digitales</h2>
+											<div class="table-wrapper">
+												<table>
+													<thead>
+														<tr>
+															<th></th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td><strong>3.420</strong></td>
+															<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Aarchivohistorico%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Aarchivohistorico%22&collection=inah%3Aarchivohistorico" target="_blank">registros en archivo histórico</a></td>
+															<td>0,644%</td>
+															<td>&nbsp</td>
+														</tr>
+														<tr></tr>
+														<tr>
+															<td><strong>469</strong></td>
+															<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Acaudio%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Acaudio%22&collection=inah%3Acaudio" target="_blank">cápsulas de audio</a></td>
+															<td>0,088%</td>
+															<td>3.889</td>
+														</tr>
+														<tr></tr>
+														<tr>
+															<td><strong>181</strong></td>
+															<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Acapsula%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Acapsula%22&collection=inah%3Acapsula" target="_blank">cápsulas de video</a></td>
+															<td>0,034%</td>
+															<td>4.070</td>
+														</tr>
+														<tr></tr>
+														<tr>
+															<td><strong>112</strong></td>
+															<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Acodice%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Acodice%22&collection=inah%3Acodice" target="_blank">códices</a></td>
+															<td>0,021%</td>
+															<td>4.182</td>
+														</tr>
+														<tr></tr>
+														<tr>
+															<td><strong>74</strong></td>
+															<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Adisco%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Adisco%22&collection=inah%3Adisco" target="_blank">discos</a></td>
+															<td>0,014%</td>
+															<td>4.256</td>
+														</tr>
+														<tr></tr>
+														<tr>
+															<td><strong>97</strong></td>
+															<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Adocumental%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Adocumental%22&collection=inah%3Adocumental" target="_blank">documentales</a></td>
+															<td>0,018%</td>
+															<td>4.353</td>
+														</tr>
+														<tr></tr>
+														<tr>
+															<td><strong>598</strong></td>
+															<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Aentrevista%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Aentrevista%22&collection=inah%3Aentrevista" target="_blank">entrevistas</a></td>
+															<td>0,113%</td>
+															<td>4.951</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<h2 class="major">&nbsp</h2>
+												<div class="table-wrapper">
+													<table>
+														<thead>
+															<tr>
+																<th></th>
+																<th></th>
+																<th></th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><strong>383</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Aescultura%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Aescultura%22&collection=inah%3Aescultura" target="_blank">esculturas</a></td>
+																<td>0,072%</td>
+																<td>5.334</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>6</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Aeventos%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Aeventos%22&collection=inah%3Aeventos" target="_blank">eventos</a></td>
+																<td>0,001%</td>
+																<td>5.340</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>1.441</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Aexposicion%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Aexposicion%22&collection=inah%3Aexposicion" target="_blank">exposiciones</a></td>
+																<td>0,271%</td>
+																<td>6.781</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>661</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Aexvoto%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Aexvoto%22&collection=inah%3Aexvoto" target="_blank">exvotos</a></td>
+																<td>0,124%</td>
+																<td>7.442</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>483.920</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Afotografia%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Afotografia%22&collection=inah%3Afotografia" target="_blank">fotografías</a></td>
+																<td>91,13%</td>
+																<td>491.362</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>211</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Agrafica%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Agrafica%22&collection=inah%3Agrafica" target="_blank">gráficas</a></td>
+																<td>0,040%</td>
+																<td>491.573</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>659</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Aguia%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Aguia%22&collection=inah%3Aguia" target="_blank">guías</a></td>
+																<td>0,124%</td>
+																<td>492.232</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<h2 class="major">&nbsp</h2>
+												<div class="table-wrapper">
+													<table>
+														<thead>
+															<tr>
+																<th></th>
+																<th></th>
+																<th></th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><strong>729</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Ahemerografica%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Ahemerografica%22&collection=inah%3Ahemerografica" target="_blank">materiales hemerográficos</a></td>
+																<td>0,137%</td>
+																<td>492.961</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>451</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Ainforme%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Ainforme%22&collection=inah%3Ainforme" target="_blank">informes</a></td>
+																<td>0,085%</td>
+																<td>493.412</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>466</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Alibro%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Alibro%22&collection=inah%3Alibro" target="_blank">libros</a></td>
+																<td>0,088%</td>
+																<td>493.878</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>631</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Amapa%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Amapa%22&collection=inah%3Amapa" target="_blank">mapas</a></td>
+																<td>0,119%</td>
+																<td>494.509</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>12</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Amomia%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Amomia%22&collection=inah%3Amomia" target="_blank">momias</a></td>
+																<td>0,002%</td>
+																<td>494.521</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>135</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Amural%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Amural%22&collection=inah%3Amural" target="_blank">murales</a></td>
+																<td>0,025%</td>
+																<td>494.656</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>2.539</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Aobjetohistorico%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Aobjetohistorico%22&collection=inah%3Aobjetohistorico" target="_blank">objetos históricos</a></td>
+																<td>0,478%</td>
+																<td>497.195</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<h2 class="major">&nbsp</h2>
+												<div class="table-wrapper">
+													<table>
+														<thead>
+															<tr>
+																<th></th>
+																<th></th>
+																<th></th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><strong>10.491</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Aobjetoprehispanico%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Aobjetoprehispanico%22&collection=inah%3Aobjetoprehispanico" target="_blank">objetos prehispánicos</a></td>
+																<td>1,976%</td>
+																<td>507.686</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>21</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Apaleontologico%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Apaleontologico%22&collection=inah%3Apaleontologico" target="_blank">piezas paleontológicas</a></td>
+																<td>0,004%</td>
+																<td>507.707</td>
+
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>1.977</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Apintura%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Apintura%22&collection=inah%3Apintura" target="_blank">pinturas</a></td>
+																<td>0,372%</td>
+																<td>509.684</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>1.648</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Amusica%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Amusica%22&collection=inah%3Amusica" target="_blank">pistas de música</a></td>
+																<td>0,310%</td>
+																<td>511.332</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>137</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Aponencia%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Aponencia%22&collection=inah%3Aponencia" target="_blank">ponencias</a></td>
+																<td>0,026%</td>
+																<td>511.469</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>8</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Apubdigital%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Apubdigital%22&collection=inah%3Apubdigital" target="_blank">publicaciones digitales</a></td>
+																<td>0,002%</td>
+																<td>511.477</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>3.413</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Atesis%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Atesis%22&collection=inah%3Atesis" target="_blank">tesis</a></td>
+																<td>0,643%</td>
+																<td>514.890</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<h2 class="major">&nbsp</h2>
+												<div class="table-wrapper">
+													<table>
+														<thead>
+															<tr>
+																<th></th>
+																<th></th>
+																<th></th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><strong>23</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Avisitavirtual%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Avisitavirtual%22&collection=inah%3Avisitavirtual" target="_blank">visitas virtuales</a></td>
+																<td>0,004%</td>
+																<td>514.913</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>37</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Arevista%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Arevista%22&collection=inah%3Arevista" target="_blank">revistas</a></td>
+																<td>0,007%</td>
+																<td>514.950</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>2.333</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Aissue%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Aissue%22&collection=inah%3Aissue" target="_blank">números de revistas</a></td>
+																<td>0,439%</td>
+																<td>517.283</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>13.722</strong></td>
+																<td><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?type=dismax&f[0]=RELS_EXT_isMemberOfCollection_uri_ms%3A%22info%3Afedora/inah%3Aarticulo%22%20OR%20RELS_EXT_isMemberOf_uri_ms%3A%22info%3Afedora/inah%3Aarticulo%22&collection=inah%3Aarticulo" target="_blank">artículos de revistas</a></td>
+																<td>2,584%</td>
+																<td>531.005</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<p>Los 531.005 objetos digitales de la <strong><a href="https://mediateca.inah.gob.mx/islandora_74/" target="_blank">Mediateca INAH</a></strong> se presentan a sus usuarios bajo una variedad de formatos y tipos de archivo compatibles con cualquier tipo de navegador, entre los cuales podemos mencionar: <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?display=grid&f[0]=RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:codexbookCModel%22%20OR%20RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:bookCModel%22%20OR%20RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:sp_large_image_cmodel%22%20OR%20RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:albumbookCModel%22" target="_blank">imágenes</a></strong>, <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?display=grid&f[0]=RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:sp-audioCModel%22%20OR%20RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:sp-discoCModel%22" target="_blank">audios</a></strong>, <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?display=grid&f[0]=RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:mixtoCModel%22%20OR%20RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:sp_videoCModel%22" target="_blank">videos</a></strong>, <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?display=grid&f[0]=RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:journalCModel%22%20OR%20RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:sp_pdf%22%20OR%20RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:journalArticleCModel%22%20OR%20RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:journalIssueCModel%22" target="_blank">textos</a></strong> y <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?display=grid&f[0]=RELS_EXT_hasModel_uri_ms:%22info:fedora/islandora:sp-webpageCModel%22" target="_blank">multimedia</a></strong>.</p>
+											</div>
+										</div>
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<h2 class="major">Distribución por formatos</h2>
+												<canvas id="myChart" style="width:100%;max-width:600px; background-color: rgb(216, 213, 219)">
+												
+												</canvas>
+												<p> </p>
+											</div>
 										</div>
 										<div class="inner columns divided">
 											<div class="span-3-25">
 												<h2 class="major">Infraestructura</h2>
-												<ul>
-													<li>Aprovecha el software abierto existente y realiza adaptaciones locales utilizando recursos mínimos.</li>
-												</ul>
+												<p>
+													La <strong><a href="https://mediateca.inah.gob.mx/islandora_74/" target="_blank">Mediateca INAH</a></strong> es un desarrollo proprio de la Dirección de Mediateca de la <strong><a href="https://difusion.inah.gob.mx/" target="_blank">Coordinación Nacional de Difusión</a></strong> del <strong><a href="https://www.inah.gob.mx/" target="_blank">Instituto Nacional de Antropología e Historia</a></strong>, con sede central en la Ciudad de México.
+												</p>
+												<p>
+													Es una <i>webapp</i> desarrollada a partir de <strong><a href="#mexcom">software libre y gratuito y de código abierto</a></strong>.
+												</p>
 												<ul class="actions">
-													<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
+													<li><a href="#xuno" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
 												</ul>
 											</div>
 										</div>
-										<div class="inner columns divided">
-											<div class="span-3-25">
-												<h2 class="major">Participación ciudadana</h2>
-												<ul>
-													<li>La ciencia ciudadana constituye la base del proyecto.</li>
-												</ul>
-												<ul class="actions">
-													<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
-												</ul>
-											</div>
+									</div>
+								</section>
+
+								<section class="panel color4-alt">
+									<div class="intro color4">
+										<ul class="actions">
+											<li class="button primary color1 circle icon solid fa-question" style="cursor:help"></li>
+										</ul>
+										<p>
+											Ésta no es una colección de la  <strong><a href="https://mediateca.inah.gob.mx/repositorio/repositorio_mediateca" target="_blank">Mediateca INAH</a></strong>. 
+										</p>
+										<div class="field quarter">
+											<input type="radio" id="q2_ans1" name="No, no es correcto. Discos sí es una colección de la Mediateca." class="color2" onclick="incorrecta1()" />
+											<label for="q2_ans1">Discos</label>
+											<ol>
+												<ul style="color:coral" id="msg3"></ul>
+											</ol>
 										</div>
+										<div class="field quarter">
+											<input type="radio" id="q2_ans2" name="¡Muy bien! Rollos no es una colección de la Mediateca." class="color2" onclick="correcta1()" />
+											<label for="q2_ans2">Rollos</label>
+											<ol>
+												<ul style="color:limegreen" id="msg4"></ul>
+											</ol>
+										</div>
+										<div class="field quarter">
+											<input type="radio" id="q2_ans3" name="No, no es correcto. Visitas sí es una colección de la Mediateca." class="color2" onclick="incorrecta2()" />
+											<label for="q2_ans3">Visitas virtuales</label>
+											<ol>
+												<ul style="color:coral" id="msg5"></ul>
+											</ol>
+										</div>
+									</div>
+								</section>
+
+<!-- GIF DATOS ABIERTOS -->
+								<section class="panel">
+									<div class="gallery">
+										<a href="images/gif/DatosAbiertos.gif" class="image filtered span-2-5" data-position="top" title="gif divulgativo de Datos Abiertos de SiB Colombia" alt="gif divulgativo de Datos Abiertos de SiB Colombia"><img src="images/gif/DatosAbiertos.gif" title="gif divulgativo de Datos Abiertos de SiB Colombia" alt="gif divulgativo de Datos Abiertos de SiB Colombia"></a>
 									</div>
 								</section>
 							
 								<section class="panel">
 									<div class="intro color2">
 										<h2 class="major">¿Cómo se abre?</h2>
+										<strong><p>
+											2.1. Uso de software libre<br>
+											2.2. Aplicación de estándares<br>
+											2.3. Licenciamientos<br>
+											2.4. Términos de uso<br>
+											2.5. Búsquedas y consultas
+										</p></strong>
+										
 									</div>
 								</section>
-		
+
 								<section class="panel color4-alt">
 									<div class="inner columns divided">
 										<div class="span-3-25">
-											<h2 class="major">Participación</h2>
-											<ul>
-												<li>Ofrece datos abiertos al público en general a mayor escala.</li>
-												<li>La utilización de de grandes series de datos (big data) debe ser solicitada al administrador de la página web.</li>
-												<li>La disponibilidad de datos sencillos tales como la distribución espacial y temporal de aves facilita que puedan ser publicados y utilizados por el público en general sin mucho conocimiento previo.</li>
-											</ul>
-											<ul class="actions">
-												<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
-											</ul>
+											<h2 class="major" id="mexcom">Uso de software libre</h2>
+											<div class="table-wrapper">
+												<table>
+													<thead>
+														<tr>
+															<th></th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td><strong><a href="https://smartech.gatech.edu/handle/1853/28486" target="_blank">aDORe</a></strong></td>
+															<td>Servidor de imágenes bajo el estándar JPEG2000 y <i>framework</i> de servicio de difusión.</td>
+														</tr>
+														<tr></tr>
+														<tr>
+															<td><strong><a href="https://tomcat.apache.org/" target="_blank">Apache Tomcat</a></strong></td>
+															<td>Servidor web.</td>
+														</tr>
+														<tr></tr>
+														<tr>
+															<td><strong><a href="https://www.drupal.org/" target="_blank">Drupal</a></strong></td>
+															<td>Plataforma para construir sitios web flexibles, dinámicos y potentes.</td>
+														</tr>
+														<tr></tr>
+														<tr>
+															<td><strong><a href="https://fedora.lyrasis.org/" target="_blank">Fedora</a></strong></td>
+															<td>Plataforma de repositorio flexible y modular con soporte nativo de datos hipervinculados.</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>	
+										</div>
+											
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<h2 class="major">&nbsp</h2>
+												<div class="table-wrapper">
+													<table>
+														<thead>
+															<tr>
+																<th></th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><strong><a href="https://www.ghostscript.com/" target="_blank">GhostScript</a></strong></td>
+																<td>Intérprete para el lenguaje PostScript y archivos PDF. Renderiza y vectoriza a formatos de trama y ofrece conversión de alto nivel.</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong><a href="https://www.imagemagick.org/script/index.php" target="_blank">ImageMagick</a></strong></td>
+																<td>Paquete que se utiliza para editar y manipular imágenes digitales. Puede crear, editar, componer o convertir imágenes de mapa de bits y admite una amplia gama de formatos de archivo.</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong><a href="https://openlibrary.org/dev/docs/bookreader" target="_blank">Internet Archive BookReader</a></strong></td>
+																<td>Soporta el acceso en línea a libros escaneados.</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
 										</div>
 										<div class="inner columns divided">
 											<div class="span-3-25">
-												<h2 class="major">Barreras de acceso</h2>
-												<ul>
-													<li>Ofrece datos abiertos al público en general a mayor escala.</li>
-												<li>La utilización de de grandes series de datos (big data) debe ser solicitada al administrador de la página web.</li>
-												<li>La disponibilidad de datos sencillos tales como la distribución espacial y temporal de aves facilita que puedan ser publicados y utilizados por el público en general sin mucho conocimiento previo.</li>
-												</ul>
-												<ul class="actions">
-													<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
-												</ul>
+												<h2 class="major">&nbsp</h2>
+												<div class="table-wrapper">
+													<table>
+														<thead>
+															<tr>
+																<th></th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><strong><a href="https://www.islandora.ca/" target="_blank">Islandora</a></strong></td>
+																<td>Gestiona todo tipo de activos digitales. Ayuda a crear y a administrar de manera colaborativa colecciones digitales en todos los tipos de datos y dominios de conocimiento.</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong><a href="https://jwplayer.com/" target="_blank">JWPlayer</a></strong></td>
+																<td>Plataforma que soporta la transmisión de videos a cualquier escala.</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong><a href="https://kakadusoftware.com/" target="_blank">Kakadu Software</a></strong></td>
+																<td>Paquete de herramientas para comprimir y manipular imágenes, codificar video y gestionar imágenes bajo los estándares internacionales ISO/IEC 15444-1 y JPEG2000.</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<h2 class="major">&nbsp</h2>
+												<div class="table-wrapper">
+													<table>
+														<thead>
+															<tr>
+																<th></th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><strong><a href="https://openseadragon.github.io/" target="_blank">OpenSeadragon</a></strong></td>
+																<td>Visor web para imágenes ampliables de alta resolución.</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong><a href="https://mozilla.github.io/pdf.js/" target="_blank">PDF.js</a></strong></td>
+																<td>Plataforma basada en estándares web para analizar y representar archivos PDF.</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong><a href="https://solr.apache.org/" target="_blank">Solr</a></strong></td>
+																<td>Plataforma para apoyar búsquedas y consultas.</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong><a href="http://www.turnjs.com/" target="_blank">turn.js</a></strong></td>
+																<td>Crea libros animados con HTML5.</td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong><a href="https://getuikit.com/" target="_blank">UIkit</a></strong></td>
+																<td><i>Framework</i> para <i>frontend</i> ligero y modular para desarrollar interfaces web.</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<h2 class="major">Estándares en Ciencias Sociales Abiertas</h2>
+												<div class="table-wrapper">
+													<table>
+														<thead>
+															<tr>
+																<th></th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><strong>Identificador único del repositorio</strong>:</td>
+																<td><a href="https://www.google.com/search?q=oai%3Amediateca.inah.gob.mx&oq=oai%3Amediateca.inah.gob.mx&aqs=chrome.0.69i59j69i58.2153j0j4&sourceid=chrome&ie=UTF-8" target="_blank">oai:mediateca.inah.gob.mx</a></td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>Identificador en <dfn title="Siglas para Registry of Open Access Repositories">ROAR</dfn></strong>:</td>
+																<td><a href="http://roar.eprints.org/13382/" target="_blank">13382</a></td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>Identificador en Open<dfn title="Siglas para Directory of Open Access Repositories">DOAR</dfn></strong>:</td>
+																<td><a href="https://v2.sherpa.ac.uk/id/repository/9666?template=opendoar" target="_blank">9666</a></td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>Estándar para metadatos</strong>:</td>
+																<td><a href="https://www.dublincore.org/" target="_blank">Dublin Core</a></td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>Protocolo para la cosecha de metadatos</strong>:</td>
+																<td><a href="https://www.openarchives.org/pmh/" target="_blank">OAI-PMH</a></td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>Ruta de acceso a cosechadores</strong>:</td>
+																<td><a href="http://mediateca.inah.gob.mx/islandora_74/oai2" target="_blank">/oai2</a></td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong><dfn title="Siglas para Object Persistent Identifiers">OPIDs</dfn></strong>:</td>
+																<td>Reemplazar <code title="dos puntos">:</code> por <code title="guión bajo">_</code></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<p>La aplicación de los identificadores a los objetos digitales, por un lado, y los estándares a los datos y metadatos, por el otro, son la base para que cualquier repositorio abierto opere según los principios FAIR, favoreciendo, de esa manera, la</p>
+												<p>
+													<code>F</code>acilidad de hallazgo, la<br>
+													<code>A</code>ccesibilidad, la<br>
+													<code>I</code>nteroperabilidad y la<br>
+													<code>R</code>eutilización
+												</p>
+												<p>por parte de usuarios, desarrolladores, refactorizadores, usuarios y comunidad en general.</p>
+											</div>
+										</div>
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<h2 class="major">Licenciamientos</h2>
+												<div class="table-wrapper">
+													<table>
+														<thead>
+															<tr>
+																<th></th>
+																<th></th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><strong>Objetos digitales</strong>:</td>
+																<td><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC  (Reconocimiento - No Comercial)</a></td>
+																<td><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a></td>
+															</tr>
+															<tr></tr>
+															<tr>
+																<td><strong>Metadatos</strong>:</td>
+																<td><a href="https://creativecommons.org/choose/zero/" target="_blank">Dominio público</a></td>
+																<td><a rel="license"
+																href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">
+																<img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" /></a>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<p>
+													En cuanto a los objetos digitales cubiertos con la licencia <strong><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC  (Reconocimiento - No Comercial)</a></strong>, «se pueden consultar, guardar y distribuir sin fines comerciales siempre que se especifiquen los correspondientes derechos de autor así como el origen de la información, incluyendo el hipervínculo dentro de la <strong><a href="https://mediateca.inah.gob.mx/islandora_74/" target="_blank">Mediateca INAH</a></strong>.»
+												</p>
+											</div>
+										</div>
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<p>
+													En cuanto a los metadatos liberados a través de la licencia <strong><a href="https://creativecommons.org/choose/zero/" target="_blank">CC-0</a></strong>, «se pueden copiar y usar sin restricciones bajo la licencia de contenido de dominio público, sin embargo el <strong><a href="https://www.inah.gob.mx/" target="_blank">Instituto Nacional de Antropología e Historia</a></strong> de México solicita que en caso de utilizarlos se sigan los siguientes consideraciones:
+												</p>
+													
+													<ol>
+														<li>Siempre especificar y asegurarse que sea claro y visible que los metadatos provienen de la <strong><a href="https://mediateca.inah.gob.mx/islandora_74/" target="_blank">Mediateca INAH</a></strong> e incluir el hipervínculo a la misma.</li>
+														<li>No utilizar los metadatos de modo que se siguiera que se tiene la propiedad o derechos sobre ellos.</li>
+														<li>No modificar la información contenida en los metadatos.</li>
+														<li>Asegurarse de usar siempre la última versión publicada en la <strong><a href="https://mediateca.inah.gob.mx/islandora_74/" target="_blank">Mediateca INAH</a></strong>.»</li>
+													</ol>
+											</div>
+										</div>
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<h2 class="major">Términos de uso</h2>
+												<p>
+													Todos los contenidos de la <strong><a href="https://mediateca.inah.gob.mx/islandora_74/" target="_blank">Mediateca INAH</a></strong> pertenecen al <strong><a href="https://www.inah.gob.mx/" target="_blank">Instituto Nacional de Antropología e Historia</a></strong> de México.
+												</p>
+												<p>
+													La información y los archivos allí disponibles pueden ser utilizados de manera personal y sin fines de lucro, siempre que no sean alterados, se reconozcan todos los créditos correspondientes y se indique la referencia a este repositorio.
+												</p>
+												<p>
+													Para cualquier otro uso se debe realizar la consulta a la Coordinación de Asuntos Jurídicos (<strong><a href="mailto:permisos_cnaj@inah.gob.mx" target="_blank">permisos_cnaj@inah.gob.mx</a></strong>) del <strong><a href="https://www.inah.gob.mx/" target="_blank">Instituto Nacional de Antropología e Historia</a></strong>.
+												</p>
+											</div>
+										</div>
+
+										<div class="span-3-50" id="">
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/zt1DArGKZ38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+											<p></p>
+											<ul class="actions">
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li><a href="#obj" class="button primary color1 circle icon solid fa-angle-left" title="Ir a Presentación"></a></li>
+												<li></li>
+												<li><a href="#adc" class="button primary color1 circle icon solid fa-angle-right" title="¡Avanzar!"></a></li>
+											</ul>
+										</div>
+
+										<div class="inner columns divided">
+											<div class="span-3-25">
+												<h2 class="major">Búsquedas y consultas</h2>
+												<p>Todo el contenido de la Mediateca INAH está relacionado a través de una red semántica, de manera que existen múltiples vías para encontrar un objeto. Hay tres modos de comenzar una búsqueda en la plataforma:</p>
+													<ol> 
+														<li>El buscador general</li>
+														<li>Las colecciones y acervos digitales y</li>
+														<li>El buscador avanzado</li>
+													</ol>
+												<p>Todos ellos llevan a la sección de resultados del repositorio donde se podrá refinar aún más o modificar la búsqueda, así como desplegar, guardar o compartir los resultados de distintas formas.</p>
 											</div>
 										</div>
 									</div>
 								</section>
-		
+
 								<section class="panel">
 									<div class="intro color2">
 										<h2 class="major">¿A quién se abre?</h2>
+										<strong><p>
+											3.1. Proveedores<br>
+											3.2. Usuario<br>
+										</p></strong>
+										
 									</div>
 								</section>
-		
+
 								<section class="panel color4-alt">
 									<div class="inner columns divided">
 										<div class="span-3-25">
-											<h2 class="major">Usos</h2>
-											<ul>
-												<li>La apertura de datos permite la reutilización de datos por científicos de disciplinas similares, pero que no pertenencen al proyecto de origen.</li>
-												<li>Los datos disponibles han sido tomados para investigaciones en varias disciplinas relacionadas, como ecología del paisaje, macroecología, biogeografía, ciencias de la computación, estadísticas, human computation, ciencia de la conservación, entre otras.</li>
-												<li>El público tiene un papel capital en la recolección de datos y también es el usuario del proyecto.</li>
-											</ul>
+											<h2 class="major" id="mexqui">Proveedores</h2>
+											<p>
+												En tanto creadoras de datos e información, están convocadas a participar las distintas áreas del <strong><a href="https://www.inah.gob.mx/" target="_blank">Instituto Nacional de Antropología e Historia</a></strong>, incluidos sus <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/object/inah%3Acentro" target="_blank">31 centros</a></strong>, <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/object/inah%3Aarchivo" target="_blank">3 archivos</a></strong>, <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/object/inah%3Abiblioteca" target="_blank">67 bibliotecas</a></strong>, <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/object/inah%3Aceramoteca" target="_blank">3 ceramotecas</a></strong>, <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/object/inah%3Aescuela" target="_blank">4 escuelas</a></strong>, <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/object/inah%3Afonoteca" target="_blank">4 fonotecas</a></strong>, <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/object/inah%3Afototeca" target="_blank">19 fototecas</a></strong>, <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/object/inah%3Alaboratorio" target="_blank">8 laboratorios</a></strong>, la <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/object/inah%3Amapoteca" target="_blank"> Mapoteca Histórica</a></strong>, <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/object/inah%3Amuseo" target="_blank">129 museos</a></strong>, <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/object/inah%3Avideoteca" target="_blank">3 videotecas</a></strong> y <strong><a href="https://mediateca.inah.gob.mx/repositorio/islandora/object/inah%3Asitioprehispanico" target="_blank">189 zonas arqueológicas</a></strong>; así como todo proyecto de exploración, investigación, divulgación, convervación o restauración avalado y financiado por el <strong><a href="https://www.inah.gob.mx/" target="_blank">INAH</a></strong>.
+											</p>
+											
 											<ul class="actions">
-												<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
+												<li><a href="#xuno" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
 											</ul>
 										</div>
-										<div class="inner columns divided">
-											<div class="span-3-25">
-												<h2 class="major">Beneficios</h2>
-												<ul>
-													<li>La apertura de datos permite la reutilización de datos por científicos de disciplinas similares, pero que no pertenencen al proyecto de origen.</li>
-													<li>Los datos disponibles han sido tomados para investigaciones en varias disciplinas relacionadas, como ecología del paisaje, macroecología, biogeografía, ciencias de la computación, estadísticas, human computation, ciencia de la conservación, entre otras.</li>
-													<li>El público tiene un papel capital en la recolección de datos y también es el usuario del proyecto.</li>
-												</ul>
-												<ul class="actions">
-													<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
-												</ul>
+
+									<style> #map { width: 525px; height: 325px; } </style>
+									<div class="inner columns divided">
+										<div class="span-3-25">
+											<div id="map">
+												
 											</div>
 										</div>
-									</div>
-								</section>
-						</section>
-
-						<!-- BANDERA -->
-						<section class="panel">
-							<div class="gallery">
-								<a href="images/pic03.jpg" class="image filtered span-2-25" data-position="top" title="Bandera de Colombia" alt="Bandera de Colombia"><img src="images/pic03.jpg" title="Bandera de Colombia" alt="Bandera de Colombia"></a>
-							</div>
-						</section>
-
-					<!-- Panel -->
-					<section class="panel color1" id="xdos">
-						<div class="intro joined">
-							<h2 class="major">2. SiB Colombia</h2>
-							<p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam.</p>
-							<ul class="actions">
-								<li><a href="#saludo" class="button primary color1 circle icon solid fa-list-ol" title="Ir a Contenido">Home</a></li>
-							</ul>
-						</div>
-						<div class="inner">
-							<ul class="grid-icons three connected">
-								<li><span class="icon fa-gem"><span class="label">Lorem</span></span></li>
-								<li><span class="icon solid fa-camera-retro"><span class="label">Ipsum</span></span></li>
-								<li><span class="icon solid fa-cog"><span class="label">Dolor</span></span></li>
-								<li><span class="icon solid fa-paper-plane"><span class="label">Sit</span></span></li>
-								<li><span class="icon solid fa-chart-bar"><span class="label">Amet</span></span></li>
-								<li><span class="icon solid fa-code"><span class="label">Nullam</span></span></li>
-							</ul>
-						</div>
-					</section>
-
-<!-- 
-	ARGENTINA 
--->
-					<!-- BANDERA -->
-					<section class="panel">
-						<div class="gallery">
-							<a href="images/pic04 - copia.jpg" class="image filtered span-2-25" data-position="top" title="Bandera de Argentina" alt="Bandera de Argentina"><img src="images/pic04 - copia.jpg" title="Bandera de Argentina" alt="Bandera de Argentina"></a>
-						</div>
-					</section>
-<!-- 
-	eBIRD - ARGENTINA 
--->
-				<!-- Panel -->
-				<section class="panel color1" id="xtres">
-					<div class="intro joined">
-						<h2 class="major"><a href="https://ebird.org/argentina/home">3. eBird Argentina</a></h2>
-						<p><strong><a href="https://ebird.org/home">eBird</a></strong> es una plataforma web y móvil de ciencia ciudadana, donde personas de todo el mundo forman una comunidad global unida por las aves. Es una iniciativa del <strong><a href="https://www.birds.cornell.edu/home/">Laboratorio de Ornitología de Cornell</a></strong>, y desde el 2013 cuenta con un portal argentino, administrado por <strong><a href="https://www.avesargentinas.org.ar/">Aves Argentinas</a></strong>.</p>
-						<ul class="actions">
-							<li><a href="#saludo" class="button primary color1 circle icon solid fa-list-ol" title="Ir a Contenido">Home</a></li>
-						</ul>
-					</div>
-					<div class="inner">
-						<ul class="grid-icons three connected">
-							<li><a href="#first" title="Galería"><span class="icon solid fa-camera-retro"><span class="label">Ipsum</span></span></a></li>
-							<li><a href="#first" title="Datos y contexto"><span class="icon fa-address-card"><span class="label">Lorem</span></span></a></li>
-							<li><a href="#first" title="Redes sociales y tiendas"><span class="icon solid fa-paper-plane"><span class="label">Dolor</span></span></a></li>
-							<li><a href="#first" title="¿Qué se abre?"><span class="icon solid fa-dice-one"><span class="label">Sit</span></span></a></li>
-							<li><a href="#first" title="¿Cómo se abre?"><span class="icon solid fa-dice-two"><span class="label">Amet</span></span></a></li>
-							<li><a href="#first" title="¿A quién se abre?"><span class="icon solid fa-dice-three"><span class="label">Nullam</span></span></a></li>
-						</ul>
-					</div>
-				</section>
-
-				<!-- Panel -->
-				<section class="panel">
-					<div class="gallery">
-						<div class="group span-3">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/hDUiRcy0V8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-							
-							<a href="" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/bird1.jpg" alt="" /></a>
-							<a href="" class="image filtered span-1-5" data-position="bottom"><img src="images/gallery/thumbs/bird2.jpg" alt="" /></a>
-						</div>
-						<div class="group span-3">
-							<a href="" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/bird3.jpg" alt="" />
-							<a href="" class="image filtered span-1-5" data-position="bottom"><img src="images/gallery/thumbs/bird4.jpg" alt="" /></a>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/CEKY3eYYIQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-						</div>
-						<a href="images/gif/gif1.gif" class="image filtered span-2-5" data-position="right"><img src="images/gif/gif1.gif" alt="" /></a>
-					</div>
-				</section>
-
-				<!-- Panel -->
-				<section class="panel color4-alt">
-					<div class="inner columns divided">
-						<div class="span-3-25">
-							<h2 class="major">Datos básicos</h2>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th></th>
-											<th></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="span-1-5">
-							<ul class="contact-icons color1">
-								<li class="icon brands fa-facebook-f"><a href="https://www.facebook.com/ebirdargentina">/ebirdargentina</a></li>
-								<li class="icon brands fa-instagram"><a href="https://www.instagram.com/ebird.arg/">/ebird.arg</a></li>
-								<li class="icon brands fa-twitter"><a href="https://twitter.com/ebirdarg">@eBirdArg</a></li>
-								<li class="icon brands fa-youtube"><a href="https://www.youtube.com/@eBirdArgentina/featured">/@eBirdArgentina</a></li>	
-								<li class="icon brands fa-google-play"><a href="https://play.google.com/store/apps/details?id=edu.cornell.birds.ebird&hl=es_CO&gl=US">eBird on GooglePlay</a></li>							
-								<li class="icon brands fa-app-store"><a href="https://apps.apple.com/us/app/ebird/id988799279">eBird on App Store</a></li>
-							</ul>
-						</div>
-					</div>	
-				</section>
-
-						<section class="panel">
-							<div class="intro color2">
-								<h2 class="major">¿Qué se abre?</h2>
-							</div>
-						</section>
-
-						<section class="panel color4-alt">
-							<div class="inner columns divided">
-								<div class="span-3-25">
-									<h2 class="major">Datos</h2>
-									<ul>
-										<li>Liberación de los datos para la reutilización en redes científicas y por ciudadanos.</li>
-										<li>Los productores de datos no son científicos sino ciudadanos.</li>
-										<li>Compartir datos en una comunidad de aficionados a las aves, por más que luego esos datos también sean utilizados por científicos en diversas disciplinas.</li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
-									</ul>
-								</div>
-								<div class="inner columns divided">
-									<div class="span-3-25">
-										<h2 class="major">Infraestructura</h2>
-										<ul>
-											<li>Aprovecha el software abierto existente y realiza adaptaciones locales utilizando recursos mínimos.</li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="inner columns divided">
-									<div class="span-3-25">
-										<h2 class="major">Participación ciudadana</h2>
-										<ul>
-											<li>La ciencia ciudadana constituye la base del proyecto.</li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</section>
-					
-						<section class="panel">
-							<div class="intro color2">
-								<h2 class="major">¿Cómo se abre?</h2>
-							</div>
-						</section>
-
-						<section class="panel color4-alt">
-							<div class="inner columns divided">
-								<div class="span-3-25">
-									<h2 class="major">Participación</h2>
-									<ul>
-										<li>Ofrece datos abiertos al público en general a mayor escala.</li>
-										<li>La utilización de de grandes series de datos (big data) debe ser solicitada al administrador de la página web.</li>
-										<li>La disponibilidad de datos sencillos tales como la distribución espacial y temporal de aves facilita que puedan ser publicados y utilizados por el público en general sin mucho conocimiento previo.</li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
-									</ul>
-								</div>
-								<div class="inner columns divided">
-									<div class="span-3-25">
-										<h2 class="major">Barreras de acceso</h2>
-										<ul>
-											<li>Ofrece datos abiertos al público en general a mayor escala.</li>
-										<li>La utilización de de grandes series de datos (big data) debe ser solicitada al administrador de la página web.</li>
-										<li>La disponibilidad de datos sencillos tales como la distribución espacial y temporal de aves facilita que puedan ser publicados y utilizados por el público en general sin mucho conocimiento previo.</li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</section>
-
-						<section class="panel">
-							<div class="intro color2">
-								<h2 class="major">¿A quién se abre?</h2>
-							</div>
-						</section>
-
-						<section class="panel color4-alt">
-							<div class="inner columns divided">
-								<div class="span-3-25">
-									<h2 class="major">Usos</h2>
-									<ul>
-										<li>La apertura de datos permite la reutilización de datos por científicos de disciplinas similares, pero que no pertenencen al proyecto de origen.</li>
-										<li>Los datos disponibles han sido tomados para investigaciones en varias disciplinas relacionadas, como ecología del paisaje, macroecología, biogeografía, ciencias de la computación, estadísticas, human computation, ciencia de la conservación, entre otras.</li>
-										<li>El público tiene un papel capital en la recolección de datos y también es el usuario del proyecto.</li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
-									</ul>
-								</div>
-								<div class="inner columns divided">
-									<div class="span-3-25">
-										<h2 class="major">Beneficios</h2>
-										<ul>
-											<li>La apertura de datos permite la reutilización de datos por científicos de disciplinas similares, pero que no pertenencen al proyecto de origen.</li>
-											<li>Los datos disponibles han sido tomados para investigaciones en varias disciplinas relacionadas, como ecología del paisaje, macroecología, biogeografía, ciencias de la computación, estadísticas, human computation, ciencia de la conservación, entre otras.</li>
-											<li>El público tiene un papel capital en la recolección de datos y también es el usuario del proyecto.</li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#xtres" class="button primary color1 circle icon solid fa-home" title="Regresar a Experiencia"></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</section>
-				</section>
-
-				<!-- BANDERA -->
-				<section class="panel">
-					<div class="gallery">
-						<a href="images/pic02.jpg" class="image filtered span-1-75" data-position="top" title="Senyera del País Valencià" alt="Senyera del País Valencià"><img src="images/pic02.jpg" title="Senyera del País Valencià" alt="Senyera del País Valencià"></a>
-					</div>
-				</section>
-
-
-				<!-- Panel (Spotlight) -->
-				<section class="panel spotlight medium right" id="first">
-					<div class="content span-7">
-						<h2 class="major">Sed etiam aenean</h2>
-						<p>Mauris et ligula arcu. Proin dapibus convallis accumsan. Lorem maximus hendrerit orci, sit amet elementum massa hendrerit sed. Donec et ullamcorper ligula. Suspendisse amet potenti. Ut pretium libero eleifend euismod sed tristique. Quisque dictum magna risus, id ultricies justo sagittis vitae. Sed id odio tempor, porttitor elit amet, gravida hendrerit fringilla lorem ipsum dolor.</p>
-						<ul class="actions">
-							<li><a href="#first" class="button primary color1 circle icon solid fa-angle-left">Next</a></li>
-							<li><a href="#home" class="button primary color1 circle icon solid fa-home">Home</a></li>
-							<li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
-						</ul>
-					</div>
-					<div class="image filtered tinted" data-position="top left">
-						<img src="images/pic03 (2).jpg" alt="" />
-					</div>
-				</section>
-						
-						
-
-						<!-- Panel (Spotlight) -->
-							<section class="panel spotlight large left">
-								<div class="content span-5">
-									<h2 class="major">Magna amet tempus</h2>
-									<p>Mauris a cursus velit. Nunc lacinia sollicitudin egestas bibendum, magna dui bibendum ex, sagittis commodo enim risus sed magna nulla. Vestibulum ut consequat velit. Curabitur vitae libero lorem. Quisque iaculis porttitor blandit. Nullam quis sagittis maximus. Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar.</p>
-								</div>
-								<div class="image filtered tinted" data-position="top right">
-									<img src="images/pic03 (2).jpg" alt="" />
-								</div>
-							</section>
-
-						<!-- Panel -->
-							<section class="panel">
-								<div class="intro color2">
-									<h2 class="major">Elit integer</h2>
-									<p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam.</p>
-								</div>
-								<div class="gallery">
-									<div class="group span-3">
-										<iframe width="560" height="315" src="https://www.youtube.com/embed/CEKY3eYYIQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-										
-										<a href="images/gallery/fulls/02.jpg" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/02.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/03.jpg" class="image filtered span-1-5" data-position="bottom"><img src="images/gallery/thumbs/03.jpg" alt="" /></a>
-									</div>
-									<a href="images/gallery/fulls/04.jpg" class="image filtered span-2-5" data-position="top"><img src="images/gallery/thumbs/04.jpg" alt="" /></a>
-									<div class="group span-4-5">
-										<a href="images/gallery/fulls/05.jpg" class="image filtered span-3" data-position="top"><img src="images/gallery/thumbs/05.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/06.jpg" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/06.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/07.jpg" class="image filtered span-1-5" data-position="bottom"><img src="images/gallery/thumbs/07.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/08.jpg" class="image filtered span-3" data-position="top"><img src="images/gallery/thumbs/08.jpg" alt="" /></a>
-									</div>
-									<a href="images/gallery/fulls/09.jpg" class="image filtered span-2-5" data-position="right"><img src="images/gallery/thumbs/09.jpg" alt="" /></a>
-								</div>
-							</section>
-
-						<!-- Panel -->
-							<section class="panel color4-alt">
-								<div class="intro color4">
-									<h2 class="major">Contact</h2>
-									<p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam.</p>
-								</div>
-								<div class="inner columns divided">
-									<div class="span-3-25">
-										<form method="post" action="#">
-											<div class="fields">
-												<div class="field half">
-													<label for="name">Name</label>
-													<input type="text" name="name" id="name" />
-												</div>
-												<div class="field half">
-													<label for="email">Email</label>
-													<input type="email" name="email" id="email" />
-												</div>
-												<div class="field">
-													<label for="message">Message</label>
-													<textarea name="message" id="message" rows="4"></textarea>
-												</div>
-											</div>
-											<ul class="actions">
-												<li><input type="submit" value="Send Message" class="button primary" /></li>
-											</ul>
-										</form>
-									</div>
-									<div class="span-1-5">
-										<ul class="contact-icons color1">
-											<li class="icon brands fa-twitter"><a href="#">@untitled-tld</a></li>
-											<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled</a></li>
-											<li class="icon brands fa-snapchat-ghost"><a href="#">@untitled-tld</a></li>
-											<li class="icon brands fa-instagram"><a href="#">@untitled-tld</a></li>
-											<li class="icon brands fa-medium-m"><a href="#">medium.com/untitled</a></li>
-										</ul>
-									</div>
-								</div>
-							</section>
-
-						<!-- Panel -->
-							<section class="panel color2-alt">
-								<div class="intro color2">
-									<h2 class="major">Elements</h2>
-									<p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam. </p>
-								</div>
-								<div class="inner columns aligned">
-									<div class="span-2-75">
-
-										<h3 class="major">Text</h3>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-
-										<h1>Heading Level 1</h1>
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<h5>Heading Level 5</h5>
-										<h6>Heading Level 6</h6>
-
-									</div>
-									<div class="span-3">
-
-										<h4>Blockquote</h4>
-										<blockquote>Lorem ipsum dolor sit amet. Felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in vestibulum. Blandit adipiscing eu iaculis volutpat ac adipiscing volutpat ac adipiscing faucibus.</blockquote>
-
-										<h4>Preformatted</h4>
-										<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + (i++);
-    deck.shuffle();
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-
-									</div>
-									<div class="span-1-25">
-
-										<h3 class="major">Lists</h3>
-
-										<h4>Unordered</h4>
-										<ul>
-											<li>Lorem ipsum dolor sit.</li>
-											<li>Dolor pulvinar etiam.</li>
-											<li>Etiam vel felis viverra.</li>
-										</ul>
-
-										<h4>Alternate</h4>
-										<ul class="alt">
-											<li>Lorem ipsum dolor sit.</li>
-											<li>Dolor pulvinar etiam.</li>
-											<li>Etiam vel felis viverra.</li>
-											<li>Felis enim feugiat.</li>
-										</ul>
-
-									</div>
-									<div class="span-1-5">
-
-										<h4>Ordered</h4>
-										<ol>
-											<li>Lorem ipsum dolor sit.</li>
-											<li>Dolor pulvinar etiam.</li>
-											<li>Etiam vel felis viverra.</li>
-											<li>Felis enim feugiat.</li>
-											<li>Etiam vel felis lorem.</li>
-										</ol>
-
-										<h4>Actions</h4>
-										<ul class="actions">
-											<li><a href="#" class="button primary color2">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-										</ul>
-										<ul class="actions stacked">
-											<li><a href="#" class="button primary color2">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-										</ul>
-
-									</div>
-									<div class="span-1-25">
-
-										<h4>Icons</h4>
-										<ul class="icons">
-											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-											<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-										</ul>
-
-										<h4>Contact Icons</h4>
-										<ul class="contact-icons color2">
-											<li class="icon brands fa-twitter"><a href="#">Twitter</a></li>
-											<li class="icon brands fa-facebook-f"><a href="#">Facebook</a></li>
-											<li class="icon brands fa-instagram"><a href="#">Instagram</a></li>
-											<li class="icon brands fa-github"><a href="#">GitHub</a></li>
-											<li class="icon brands fa-medium-m"><a href="#">Medium</a></li>
-										</ul>
-
-									</div>
-									<div class="span-3">
-										<h3 class="major">Table</h3>
-										<h4>Default</h4>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
+									</div>	
+									<div class="inner columns divided">
+										<div class="span-3-25">
+											<h2 class="major">Usuario</h2>
+												<p> Usuarios </p>
 										</div>
 									</div>
-									<div class="span-3">
-										<h4>Alternate</h4>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
+									<div class="inner columns divided">
+										<div class="span-4-75">
+											<h2 class="major">Impacto humano</h2>
+											<p> Acuñando la expresión de Fressoli y Arza (2017), acabamos de completar un reconocimiento al primero de los cuatro "casos ejemplares" en la gestión contemporánea de la información científica a través de la Mediateca INAH, repositorio abierto de datos abiertos dentro del mundo la ciencia abierta latinoamericana. Y decimos "ejemplares" por varias razones:</p>
+												<ol>
+													<li>La Mediateca INAH es un proyecto concebido a largo plazo, que cuenta con mantenimiento constante y planes de mejoramiento.</li>
+													<li>Se inserta en el ecosistema de la Agenda Digital de Cultura siendo un repositorio abierto proveedor y proveido. Proveedor de MEXICANA y proveido de sus centenares de lugares repartidos por todo el territorio mexicano.</li>
+													<li>A parte de que su interfaz está muy bien diseñada estéticamente, la calidad de datos, información y fuentes a disposición de cualquier interesado es realmente deslumbrante.</li>
+													<li>Incentiva por sí solo la curiosidad de navegar por sus catálogos, aplicar filtros de búsqueda y dejarse soprender por la riqueza del mundo social y cultural del pasado y del presente porque, al final de cuentas, es justo esa curiosidad la savia de la ciencia.</li>
+												</ol>
 										</div>
-									</div>
-									<div class="span-2-25">
-										<h3 class="major">Buttons</h3>
-										<ul class="actions">
-											<li><a href="#" class="button primary color2">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button large">Large</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary color2 icon solid fa-cog">Icon</a></li>
-											<li><a href="#" class="button icon fa-gem">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary color2 disabled">Disabled</span></li>
-											<li><span class="button disabled">Disabled</span></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary color2 circle icon solid fa-cog">Icon</a></li>
-											<li><a href="#" class="button circle icon fa-gem">Icon</a></li>
-										</ul>
-									</div>
-									<div class="span-4-5">
-										<h3 class="major">Form</h3>
-										<form method="post" action="#">
-											<div class="fields">
-												<div class="field third">
-													<label for="demo-name">Name</label>
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-												</div>
-												<div class="field third">
-													<label for="demo-email">Email</label>
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-												</div>
-												<div class="field third">
-													<label for="demo-category">Category</label>
-													<div class="select-wrapper">
-														<select name="demo-category" id="demo-category">
-															<option value="">-</option>
-															<option value="1">Manufacturing</option>
-															<option value="1">Shipping</option>
-															<option value="1">Administration</option>
-															<option value="1">Human Resources</option>
-														</select>
-													</div>
-												</div>
-												<div class="field quarter">
-													<input type="radio" id="demo-priority-low" name="demo-priority" class="color2" checked />
-													<label for="demo-priority-low">Low Priority</label>
-												</div>
-												<div class="field quarter">
-													<input type="radio" id="demo-priority-high" name="demo-priority" class="color2" />
-													<label for="demo-priority-high">High Priority</label>
-												</div>
-												<div class="field quarter">
-													<input type="checkbox" id="demo-copy" name="demo-copy" class="color2" />
-													<label for="demo-copy">Email a copy</label>
-												</div>
-												<div class="field quarter">
-													<input type="checkbox" id="demo-human" name="demo-human" class="color2" checked />
-													<label for="demo-human">Not a robot</label>
-												</div>
-												<div class="field">
-													<label for="demo-message">Message</label>
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="2"></textarea>
-												</div>
-											</div>
-											<ul class="actions">
-												<li><input type="submit" value="Send Message" class="primary color2" /></li>
-												<li><input type="reset" value="Reset" /></li>
-											</ul>
-										</form>
-									</div>
+									</div>						
 								</div>
 							</section>
 
+						 
 						<!-- Copyright -->
-							<div class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+							<div class="copyright" style="color:darkslategrey"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>&nbsp OpenScience Xp está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional</a>.Créditos del diseño a: <a href="https://html5up.net" target="_blank">HTML5 UP</a>.</div>
 
 					</div>
-
 			</div>
 
 		<!-- Scripts -->
@@ -961,6 +1118,113 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				var map = L.map('map').setView([23.886,-102.524],4);
+				L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors | Centros INAH (elaboración propia)' }).addTo(map);
+				var marker = L.marker([19.42882, -99.15934]).addTo(map);
+				marker.bindPopup("INAH<br><a href='https://mediateca.inah.gob.mx/islandora_74/' target='_blank'>Mediateca INAH</a>");
+				var marker1 = L.marker([21.88112, -102.29316]).addTo(map);
+				marker1.bindPopup("Centro INAH Aguascalientes");
+				var marker2 = L.marker([32.64405, -115.45667]).addTo(map);
+				marker2.bindPopup("Centro INAH Baja California");
+				var marker3 = L.marker([23.45093, -110.22483]).addTo(map);
+				marker3.bindPopup("Centro INAH Baja California Sur");
+				var marker4 = L.marker([19.84726, -90.53918]).addTo(map);
+				marker4.bindPopup("Centro INAH Campeche");
+				var marker5 = L.marker([16.75895, -93.10755]).addTo(map);
+				marker5.bindPopup("Centro INAH Chiapas");
+				var marker6 = L.marker([28.63050, -106.07362]).addTo(map);
+				marker6.bindPopup("Centro INAH Chihuahua");
+				var marker7 = L.marker([27.93265, -101.22634]).addTo(map);
+				marker7.bindPopup("Centro INAH Coahuila");
+				var marker8 = L.marker([19.24237, -103.73250]).addTo(map);
+				marker8.bindPopup("Centro INAH Colima");
+				var marker9 = L.marker([25.53822, -103.53686]).addTo(map);
+				marker9.bindPopup("Centro INAH Durango");
+				var marker10 = L.marker([19.16782, -99.44947]).addTo(map);
+				marker10.bindPopup("Centro INAH Estado de México");
+				var marker11 = L.marker([21.16570, -101.68871]).addTo(map);
+				marker11.bindPopup("Centro INAH Guanajuato");
+				var marker12 = L.marker([16.58069, -98.80361]).addTo(map);
+				marker12.bindPopup("Centro INAH Guerrero");
+				var marker13 = L.marker([20.12071, -98.73183]).addTo(map);
+				marker13.bindPopup("Centro INAH Hidalgo");
+				var marker14 = L.marker([20.33437, -103.02420]).addTo(map);
+				marker14.bindPopup("Centro INAH Jalisco");
+				var marker15 = L.marker([19.70284, -101.18232]).addTo(map);
+				marker15.bindPopup("Centro INAH Michoacán");
+				var marker16 = L.marker([18.6966, -99.3657]).addTo(map);
+				marker16.bindPopup("Centro INAH Morelos");
+				var marker17 = L.marker([21.17515, -105.13871]).addTo(map);
+				marker17.bindPopup("Centro INAH Nayarit");
+				var marker18 = L.marker([25.67392, -100.34289]).addTo(map);
+				marker18.bindPopup("Centro INAH Nuevo León");
+				var marker19 = L.marker([19.55085, -99.03060]).addTo(map);
+				marker19.bindPopup("Centro INAH Oaxaca");
+				var marker20 = L.marker([19.04841, -98.20784]).addTo(map);
+				marker20.bindPopup("Centro INAH Puebla");
+				var marker21 = L.marker([20.60064, -100.39248]).addTo(map);
+				marker21.bindPopup("Centro INAH Querétaro");
+				var marker22 = L.marker([18.5193, -88.3056]).addTo(map);
+				marker22.bindPopup("Centro INAH Quintana Roo");
+				var marker23 = L.marker([22.02602, -99.63753]).addTo(map);
+				marker23.bindPopup("Centro INAH San Luis Potosí");
+				var marker24 = L.marker([25.71497, -108.97652]).addTo(map);
+				marker24.bindPopup("Centro INAH Sinaloa");
+				var marker25 = L.marker([29.07568, -110.96143]).addTo(map);
+				marker25.bindPopup("Centro INAH Sonora");
+				var marker26 = L.marker([17.9661, -92.9351]).addTo(map);
+				marker26.bindPopup("Centro INAH Tabasco");
+				var marker27 = L.marker([23.72578, -99.15843]).addTo(map);
+				marker27.bindPopup("Centro INAH Tamaulipas");
+				var marker28 = L.marker([19.4885, -98.2605]).addTo(map);
+				marker28.bindPopup("Centro INAH Tlaxcala");
+				var marker29 = L.marker([20.95325, -97.41263]).addTo(map);
+				marker29.bindPopup("Centro INAH Veracruz");
+				var marker30 = L.marker([20.9737, -89.4875]).addTo(map);
+				marker30.bindPopup("Centro INAH Yucatán");
+				var marker31 = L.marker([22.87562, -102.54127]).addTo(map);
+				marker31.bindPopup("Centro INAH Zacatecas");
+			</script>
 
+			<script>
+				var xValues = ["Imágenes", 
+					"Audios", 
+					"Videos", 
+					"Textos", 
+					"Multimedia"
+					];
+				var yValues = [505229, 
+					2192,
+					982,
+					18832,
+					39 
+					];
+				var barColors = [
+					"#ac3c51",
+					"#7d2946",
+					"#5f1f3f",
+					"#ec5c5e",
+					"#ff8c6a"
+					];
+
+				new Chart("myChart", {
+					type: "doughnut",
+					data: {
+						labels: xValues,
+						datasets: [{
+						backgroundColor: barColors,
+						data: yValues,
+						borderColor: "#D8D5DB"
+						}]
+					},
+					options: {
+						title: {
+							display: false,
+							text: "Formatos de los objetos digitales"
+						}
+					}
+				});
+			</script>
 	</body>
 </html>
