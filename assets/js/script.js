@@ -110,5 +110,44 @@ function incorrecta9()
         document.getElementById("msg17").innerHTML = ans17;
     }
 
+function incorrecta10()
+    {
+        var ans18 = document.getElementById("q8_ans1").name;
+        document.getElementById("msg18").innerHTML = ans18;
+    }
+
+function correcta7()
+    {
+        var ans19 = document.getElementById("q8_ans2").name;
+        document.getElementById("msg19").innerHTML = ans19;
+    }
+
+function incorrecta11()
+    {
+        var ans20 = document.getElementById("q8_ans3").name;
+        document.getElementById("msg20").innerHTML = ans20;
+    }
+
+function incorrecta12()
+    {
+        var ans21 = document.getElementById("q9_ans1").name;
+        document.getElementById("msg21").innerHTML = ans21;
+    }
+
+function incorrecta13()
+    {
+        var ans22 = document.getElementById("q9_ans2").name;
+        document.getElementById("msg22").innerHTML = ans22;
+    }
+
+function correcta8()
+    {
+        var ans23 = document.getElementById("q9_ans3").name;
+        document.getElementById("msg23").innerHTML = ans23;
+    }
+
 
 var map = L.map('map',{ center: [40.418889, -3.691944], zoom: 6, maxBounds: [[39.53,-13.09],[40,6.24]], minZoom: 5, maxZoom: 7 }); L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+
+var map2 = L.map('map',{ center: [], zoom: 6, maxBounds: [], minZoom: 5, maxZoom: 7 }); L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' }).addTo(map2);
+
