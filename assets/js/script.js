@@ -146,6 +146,23 @@ function correcta8()
         document.getElementById("msg23").innerHTML = ans23;
     }
 
+function incorrecta14()
+    {
+        var ans24 = document.getElementById("q10_ans1").name;
+        document.getElementById("msg24").innerHTML = ans24;
+    }
+
+function correcta9()
+    {
+        var ans25 = document.getElementById("q10_ans2").name;
+        document.getElementById("msg25").innerHTML = ans25;
+    }
+
+function incorrecta15()
+    {
+        var ans26 = document.getElementById("q10_ans3").name;
+        document.getElementById("msg26").innerHTML = ans26;
+    }
 
 var map = L.map('map',{ center: [40.418889, -3.691944], zoom: 6, maxBounds: [[39.53,-13.09],[40,6.24]], minZoom: 5, maxZoom: 7 }); L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
 
