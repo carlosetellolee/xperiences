@@ -164,6 +164,79 @@ function incorrecta15()
         document.getElementById("msg26").innerHTML = ans26;
     }
 
+function incorrecta16()
+    {
+        var ans27 = document.getElementById("q11_ans1").name;
+        document.getElementById("msg27").innerHTML = ans27;
+    }
+
+function incorrecta17()
+    {
+        var ans28 = document.getElementById("q11_ans2").name;
+        document.getElementById("msg28").innerHTML = ans28;
+    }
+
+function correcta10()
+    {
+        var ans29 = document.getElementById("q11_ans3").name;
+        document.getElementById("msg29").innerHTML = ans29;
+    }
+
+function incorrecta18()
+    {
+        var ans30 = document.getElementById("q12_ans1").name;
+        document.getElementById("msg30").innerHTML = ans30;
+    }
+
+function correcta11()
+    {
+        var ans31 = document.getElementById("q12_ans2").name;
+        document.getElementById("msg31").innerHTML = ans31;
+    }
+
+function incorrecta19()
+    {
+        var ans32 = document.getElementById("q12_ans3").name;
+        document.getElementById("msg32").innerHTML = ans32;
+    }
+
+function correcta12()
+    {
+        var ans33 = document.getElementById("q13_ans1").name;
+        document.getElementById("msg33").innerHTML = ans33;
+    }
+
+function incorrecta20()
+    {
+        var ans34 = document.getElementById("q13_ans2").name;
+        document.getElementById("msg34").innerHTML = ans34;
+    }
+
+function incorrecta21()
+    {
+        var ans35 = document.getElementById("q13_ans3").name;
+        document.getElementById("msg35").innerHTML = ans35;
+    }
+
+function incorrecta22()
+    {
+        var ans36 = document.getElementById("q14_ans1").name;
+        document.getElementById("msg36").innerHTML = ans36;
+    }
+
+function correcta13()
+    {
+        var ans37 = document.getElementById("q14_ans2").name;
+        document.getElementById("msg37").innerHTML = ans37;
+    }
+
+function incorrecta23()
+    {
+        var ans38 = document.getElementById("q14_ans3").name;
+        document.getElementById("msg38").innerHTML = ans38;
+    }
+
+
 var map = L.map('map',{ center: [40.418889, -3.691944], zoom: 6, maxBounds: [[39.53,-13.09],[40,6.24]], minZoom: 5, maxZoom: 7 }); L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
 
 var map2 = L.map('map',{ center: [], zoom: 6, maxBounds: [], minZoom: 5, maxZoom: 7 }); L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' }).addTo(map2);
